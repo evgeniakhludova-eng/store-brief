@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бриф на разработку проекта — EUGENIA ART STUDIO</title>
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --accent: #5D7065;
+            --bg: #F4F6F5;
+            --card-bg: #FFFFFF;
+            --text: #2C3E50;
+            --border: #D1D8D4;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; padding: 20px; }
+        .container { max-width: 720px; margin: 0 auto; background: var(--card-bg); border-radius: 14px; box-shadow: 0 6px 24px rgba(0,0,0,0.06); padding: 32px; }
+        header { text-align: center; margin-bottom: 28px; border-bottom: 2px solid var(--bg); padding-bottom: 16px; }
+        h1 { font-size: 24px; color: var(--primary); margin-bottom: 6px; letter-spacing: -0.5px; }
+        .subtitle { font-size: 14px; color: var(--accent); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
+        .section { background: #FAFBFA; border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 20px; }
+        .section-title { font-size: 15px; font-weight: 600; color: var(--accent); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+        .form-group { margin-bottom: 14px; }
+        label { display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; color: var(--primary); }
+        input[type="text"], input[type="email"], textarea, select {
+            width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; background: #fff; color: var(--text);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        textarea { resize: vertical; min-height: 90px; }
+        input:focus, textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(93,112,101,0.12); }
+        .checkbox-group { display: flex; flex-direction: column; gap: 10px; }
+        .checkbox-label { display: flex; align-items: center; font-size: 14px; cursor: pointer; color: var(--primary); }
+        .checkbox-label input { margin-right: 10px; width: 20px; height: 20px; accent-color: var(--accent); cursor: pointer; }
+        .submit-btn {
+            width: 100%; background: var(--primary); color: #fff; border: none; padding: 16px; border-radius: 10px;
+            font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.2s, transform 0.1s; margin-top: 10px;
+        }
+        .submit-btn:hover { background: var(--accent); }
+        .submit-btn:active { transform: scale(0.99); }
+        #status { text-align: center; margin-top: 14px; font-size: 14px; font-weight: 500; color: var(--accent); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Бриф на разработку проекта</h1>
+        <div class="subtitle">Eugenia Art Studio</div>
+    </header>
+
+    <form id="briefForm">
+        <!-- 01. Общая информация -->
+        <div class="section">
+            <div class="section-title">01. Общая информация</div>
+            <div class="form-group">
+                <label>Название компании / проекта *</label>
+                <input type="text" name="project_name" required placeholder="Например: Бутик 'Аристократка'">
+            </div>
+            <div class="form-group">
+                <label>Сфера деятельности</label>
+                <input type="text" name="sphere" placeholder="Например: Одежда, обувь, кофейня, салон красоты...">
+            </div>
+            <div class="form-group">
+                <label>Целевая аудитория</label>
+                <textarea name="audience" placeholder="Кто ваш покупатель? Возраст, стиль жизни, предпочтения..."></textarea>
+            </div>
+        </div>
+
+        <!-- 02. Цели и задачи -->
+        <div class="section">
+            <div class="section-title">02. Цели и задачи проекта</div>
+            <div class="form-group">
+                <label>Основная цель создания или редизайна</label>
+                <textarea name="goals" placeholder="Повышение продаж, запуск новой точки, рестайлинг бренда..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Особенности ассортимента / товара</label>
+                <textarea name="assortment" placeholder="Что будет представлено в пространстве (габариты, специфика хранения)?"></textarea>
+            </div>
+        </div>
+
+        <!-- 03. Зонирование и пространство -->
+        <div class="section">
+            <div class="section-title">03. Пространство и зонирование</div>
+            <div class="form-group">
+                <label>Необходимые функциональные зоны</label>
+                <textarea name="zones" placeholder="Входная группа, касса, примерочные, витрины, зона ожидания..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Площадь помещения и высота потолков</label>
+                <input type="text" name="area" placeholder="Например: 65 кв.м, высота потолков 3.2 м">
+            </div>
+        </div>
+
+        <!-- 04. Стиль, бюджет и сроки -->
+        <div class="section">
+            <div class="section-title">04. Стиль, бюджет и сроки</div>
+            <div class="form-group">
+                <label>Предпочитаемый стиль и цветовая гамма</label>
+                <textarea name="style" placeholder="Минимализм, неоклассика, фирменные цвета бренда..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Примерный бюджет на реализацию</label>
+                <input type="text" name="budget" placeholder="Укажите комфортные рамки бюджета">
+            </div>
+            <div class="form-group">
+                <label>Желаемые сроки</label>
+                <input type="text" name="deadline" placeholder="Дата открытия или дедлайн сдачи проекта...">
+            </div>
+        </div>
+
+        <!-- 05. Дополнительные услуги -->
+        <div class="section">
+            <div class="section-title">05. Дополнительные опции студии</div>
+            <div class="checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="service_visit" value="Выезд (консультация / осмотр) — 5 000 руб."> Выезд (консультация / осмотр) — 5 000 руб.
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="service_plan" value="Обмерный план с выездом — 10 000 руб."> Обмерный план с выездом — 10 000 руб.
+                </label>
+            </div>
+        </div>
+
+        <!-- 06. Контакты -->
+        <div class="section">
+            <div class="section-title">06. Ваши контакты</div>
+            <div class="form-group">
+                <label>Ваше Имя / Должность *</label>
+                <input type="text" name="client_name" required placeholder="ФИО...">
+            </div>
+            <div class="form-group">
+                <label>Телефон / E-mail для связи *</label>
+                <input type="text" name="client_contacts" required placeholder="Номер телефона или email...">
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">Отправить бриф</button>
+        <div id="status"></div>
+    </form>
+</div>
+
+<script>
+    document.getElementById('briefForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const fd = new FormData(this);
+        const project = fd.get('project_name') || 'Без названия';
+        const client = fd.get('client_name') || 'Клиент';
+        const contacts = fd.get('client_contacts') || '-';
+        
+        let services = [];
+        if(fd.get('service_visit')) services.push(fd.get('service_visit'));
+        if(fd.get('service_plan')) services.push(fd.get('service_plan'));
+
+        let bodyText = `Новый бриф с сайта EUGENIA ART STUDIO\n` +
+            `========================================\n` +
+            `Проект: ${project}\n` +
+            `Сфера: ${fd.get('sphere') || '-'}\n` +
+            `ЦА: ${fd.get('audience') || '-'}\n\n` +
+            `Цели: ${fd.get('goals') || '-'}\n` +
+            `Ассортимент: ${fd.get('assortment') || '-'}\n\n` +
+            `Зоны: ${fd.get('zones') || '-'}\n` +
+            `Площадь: ${fd.get('area') || '-'}\n\n` +
+            `Стиль: ${fd.get('style') || '-'}\n` +
+            `Бюджет: ${fd.get('budget') || '-'}\n` +
+            `Сроки: ${fd.get('deadline') || '-'}\n\n` +
+            `Доп. услуги: ${services.length > 0 ? services.join('; ') : 'Нет'}\n` +
+            `========================================\n` +
+            `КЛАССИК КОНТАКТЫ:\nИмя: ${client}\nСвязь: ${contacts}`;
+
+        const mailtoLink = `mailto:evgenia.khludova@gmail.com?subject=${encodeURIComponent('Бриф: ' + project)}&body=${encodeURIComponent(bodyText)}`;
+        
+        window.location.href = mailtoLink;
+        
+        document.getElementById('status').textContent = 'Спасибо! Почтовый клиент открыт, данные успешно сформированы для отправки на evgenia.khludova@gmail.com';
+    });
+</script>
+
+</body>
+</html>

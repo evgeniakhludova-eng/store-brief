@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Бриф на разработку проекта — EUGENIA ART STUDIO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("RgAkISbEqkLC7_QQ1");
+        })();
+    </script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F4F7F6;
+            color: #111827;
+            padding: 12px 8px;
+            line-height: 1.5;
+        }
+        .container {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 20px 14px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        header {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #D8E2DF;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(13, 148, 136, 0.1);
+            color: #0D9488;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 1.5rem;
+            color: #1F2937;
+            margin-bottom: 6px;
+        }
+        p.subtitle {
+            font-size: 0.85rem;
+            color: #6B7280;
+        }
+        .studio-phone {
+            margin-top: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #0D9488;
+        }
+        .section-block {
+            background: #FAFAFC;
+            border: 1px solid #D8E2DF;
+            border-radius: 12px;
+            padding: 16px 12px;
+            margin-bottom: 16px;
+            border-left: 3px solid #0D9488;
+        }
+        .section-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1F2937;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-title span {
+            background: rgba(13, 148, 136, 0.1);
+            color: #0D9488;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+        .form-group {
+            margin-bottom: 14px;
+        }
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-bottom: 6px;
+            color: #1F2937;
+        }
+        .hint {
+            font-weight: 400;
+            color: #6B7280;
+            font-size: 0.72rem;
+            display: block;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #D8E2DF;
+            border-radius: 10px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 16px; /* Защита от автозума на iOS */
+            background: #FFFFFF;
+            color: #111827;
+        }
+        input[type="text"]:focus, textarea:focus {
+            outline: none;
+            border-color: #0D9488;
+            box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+        }
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .services-box {
+            background: rgba(13, 148, 136, 0.03);
+            border: 1px solid rgba(13, 148, 136, 0.2);
+            border-radius: 10px;
+            padding: 12px 10px;
+            margin-top: 12px;
+        }
+        .service-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #D8E2DF;
+        }
+        .service-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .service-info {
+            font-size: 0.82rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+        .service-price {
+            color: #0D9488;
+            font-weight: 700;
+        }
+        .checkbox-group {
+            display: flex;
+            gap: 16px;
+        }
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: #4B5563;
+        }
+        .checkbox-label input {
+            width: 18px;
+            height: 18px;
+            accent-color: #0D9488;
+        }
+        .stages-wrapper {
+            background: #FAFAFC;
+            border: 1px solid #D8E2DF;
+            border-radius: 12px;
+            padding: 16px 12px;
+            margin-top: 20px;
+            border-left: 3px solid #0D9488;
+        }
+        .stage-item {
+            margin-bottom: 16px;
+            padding-left: 12px;
+            border-left: 2px solid #0D9488;
+        }
+        .stage-item:last-child { margin-bottom: 0; }
+        .stage-num { font-size: 0.68rem; font-weight: 700; color: #0D9488; text-transform: uppercase; }
+        .stage-title { font-weight: 700; font-size: 0.95rem; color: #1F2937; margin: 2px 0 4px; }
+        .stage-desc-list { list-style: none; padding: 0; }
+        .stage-desc-list li { font-size: 0.78rem; color: #6B7280; margin-bottom: 2px; }
+        .btn-submit {
+            display: block;
+            width: 100%;
+            background: #1F2937;
+            color: #FFFFFF;
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .btn-submit:active {
+            background: #0D9488;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="badge">EUGENIA ART STUDIO</div>
+        <h1>Бриф на проект</h1>
+        <p class="subtitle">Интерьерное решение коммерческого пространства.</p>
+        <div class="studio-phone">Телефон: +7 (928) 438-38-93</div>
+    </header>
+
+    <form id="designBriefForm">
+        <div class="section-block">
+            <div class="section-title"><span>01</span> Общая информация</div>
+            <div class="form-group">
+                <label>Название компании / проекта</label>
+                <input type="text" id="company_name" placeholder="Введите название...">
+            </div>
+            <div class="form-group">
+                <label>Сфера деятельности</label>
+                <input type="text" id="activity" placeholder="Например: одежда, обувь...">
+            </div>
+            <div class="form-group">
+                <label>Целевая аудитория <span class="hint">Возраст, предпочтения, стиль жизни</span></label>
+                <textarea id="target_audience" placeholder="Опишите аудиторию..."></textarea>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <div class="section-title"><span>02</span> Цели проекта</div>
+            <div class="form-group">
+                <label>Основная цель создания или редизайна</label>
+                <textarea id="goal" placeholder="Повышение продаж, рестайлинг..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Эмоции гостей</label>
+                <textarea id="emotions" placeholder="Какие чувства должен вызывать интерьер?"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Ценности вашего бренда</label>
+                <textarea id="brand_values" placeholder="Премиальность, минимализм..."></textarea>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <div class="section-title"><span>03</span> Концепция и стиль</div>
+            <div class="form-group">
+                <label>Желаемая цветовая гамма</label>
+                <textarea id="colors" placeholder="Тёплые тона, монохром..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Важные элементы и материалы</label>
+                <textarea id="materials" placeholder="Дерево, металл, декор..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Освещение</label>
+                <textarea id="lighting" placeholder="Акцентная подсветка..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Референсы</label>
+                <textarea id="references" placeholder="Ссылки или описание..."></textarea>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <div class="section-title"><span>04</span> Функционал</div>
+            <div class="form-group">
+                <label>Зонирование помещения <span class="hint">Принципиальные зоны и пункты</span></label>
+                <textarea id="zoning" placeholder="Зона примерки, касса, витрины..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Плотность выкладки товара</label>
+                <textarea id="layout_density" placeholder="Бутиковая просторная раскладка..."></textarea>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <div class="section-title"><span>05</span> Технические аспекты и услуги</div>
+            <div class="form-group">
+                <label>Площадь и высота потолков</label>
+                <input type="text" id="area_height" placeholder="Площадь м², высота м.">
+            </div>
+            <div class="form-group">
+                <label>Планировочные ограничения</label>
+                <input type="text" id="constraints" placeholder="Колонны, выступы, стены">
+            </div>
+            <div class="form-group">
+                <label>Инженерные системы</label>
+                <input type="text" id="engineering" placeholder="Вентиляция, кондиционирование...">
+            </div>
+
+            <div class="services-box">
+                <div class="service-info">Выезд (консультация / осмотр): <span class="service-price">5 000 руб.</span></div>
+                <div class="checkbox-group">
+                    <label class="checkbox-label"><input type="checkbox" id="service1_yes" name="service1"> Да</label>
+                    <label class="checkbox-label"><input type="checkbox" id="service1_no" name="service1"> Нет</label>
+                </div>
+            </div>
+            <div class="services-box" style="margin-top: 8px;">
+                <div class="service-info">Обмерный план с выездом: <span class="service-price">10 000 руб.</span></div>
+                <div class="checkbox-group">
+                    <label class="checkbox-label"><input type="checkbox" id="service2_yes" name="service2"> Да</label>
+                    <label class="checkbox-label"><input type="checkbox" id="service2_no" name="service2"> Нет</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <div class="section-title"><span>06</span> Бюджет и сроки</div>
+            <div class="form-group">
+                <label>Предполагаемый бюджет</label>
+                <input type="text" id="budget" placeholder="Диапазон в рублях...">
+            </div>
+            <div class="form-group">
+                <label>Желаемые сроки</label>
+                <input type="text" id="timeline" placeholder="Дата начала и дедлайн...">
+            </div>
+        </div>
+
+        <div class="section-block">
+            <div class="section-title"><span>07</span> Контакты</div>
+            <div class="form-group">
+                <label>Имя и должность</label>
+                <input type="text" id="contact_person" placeholder="Ваше ФИО...">
+            </div>
+            <div class="form-group">
+                <label>Телефон / E-mail</label>
+                <input type="text" id="contact_info" placeholder="Телефон или email...">
+            </div>
+        </div>
+
+        <div class="stages-wrapper">
+            <div class="section-title" style="margin-bottom: 10px;"><span>Этапы</span> Этапность проекта</div>
+            <div class="stage-item"><div class="stage-num">Этап 00</div><div class="stage-title">Подготовка</div><ul class="stage-desc-list"><li>Формирование ТЗ и сроков</li></ul></div>
+            <div class="stage-item"><div class="stage-num">Этап 01</div><div class="stage-title">Обмеры</div><ul class="stage-desc-list"><li>Выезд на локацию, фотофиксация</li></ul></div>
+            <div class="stage-item"><div class="stage-num">Этап 02</div><div class="stage-title">Концепция</div><ul class="stage-desc-list"><li>Планировочное решение, 3D-схемы</li></ul></div>
+            <div class="stage-item"><div class="stage-num">Этап 03</div><div class="stage-title">3D-визуализация</div><ul class="stage-desc-list"><li>Цветовое решение</li></ul></div>
+            <div class="stage-item"><div class="stage-num">Этап 04</div><div class="stage-title">Чертежи</div><ul class="stage-desc-list"><li>Планы полов, потолков, развёртки</li></ul></div>
+            <div class="stage-item"><div class="stage-num">Этап 05</div><div class="stage-title">Инженерные разделы</div><ul class="stage-desc-list"><li>Передача в документацию</li></ul></div>
+            <div class="stage-item"><div class="stage-num">Этап 06</div><div class="stage-title">Авторское сопровождение</div><ul class="stage-desc-list"><li>Авторский надзор (опционально)</li></ul></div>
+        </div>
+
+        <button type="button" class="btn-submit" id="submitBtn" onclick="sendBrief()">Отправить заполненный бриф</button>
+    </form>
+</div>
+
+<script>
+    function getCheckboxVal(yesId, noId) {
+        const yes = document.getElementById(yesId).checked;
+        const no = document.getElementById(noId).checked;
+        if (yes) return "Да";
+        if (no) return "Нет";
+        return "Не выбрано";
+    }
+    function sendBrief() {
+        const btn = document.getElementById('submitBtn');
+        btn.disabled = true;
+        btn.innerText = 'Отправка...';
+        const templateParams = {
+            company_name: document.getElementById('company_name').value || 'Не указано',
+            activity: document.getElementById('activity').value || 'Не указано',
+            target_audience: document.getElementById('target_audience').value || 'Не указано',
+            goal: document.getElementById('goal').value || 'Не указано',
+            emotions: document.getElementById('emotions').value || 'Не указано',
+            brand_values: document.getElementById('brand_values').value || 'Не указано',
+            colors: document.getElementById('colors').value || 'Не указано',
+            materials: document.getElementById('materials').value || 'Не указано',
+            lighting: document.getElementById('lighting').value || 'Не указано',
+            references: document.getElementById('references').value || 'Не указано',
+            zoning: document.getElementById('zoning').value || 'Не указано',
+            layout_density: document.getElementById('layout_density').value || 'Не указано',
+            area_height: document.getElementById('area_height').value || 'Не указано',
+            constraints: document.getElementById('constraints').value || 'Не указано',
+            engineering: document.getElementById('engineering').value || 'Не указано',
+            service_1: getCheckboxVal('service1_yes', 'service1_no'),
+            service_2: getCheckboxVal('service2_yes', 'service2_no'),
+            budget: document.getElementById('budget').value || 'Не указано',
+            timeline: document.getElementById('timeline').value || 'Не указано',
+            contact_person: document.getElementById('contact_person').value || 'Не указано',
+            contact_info: document.getElementById('contact_info').value || 'Не указано'
+        };
+        emailjs.send('store_brief_service', 'template_znvmwvp', templateParams)
+            .then(function(response) {
+                alert('Спасибо! Бриф успешно отправлен в EUGENIA ART STUDIO.');
+                btn.disabled = false;
+                btn.innerText = 'Отправить заполненный бриф';
+            }, function(error) {
+                alert('Ошибка при отправке. Проверьте интернет-соединение.');
+                console.error('FAILED...', error);
+                btn.disabled = false;
+                btn.innerText = 'Отправить заполненный бриф';
+            });
+    }
+</script>
+</body>
+</html>
